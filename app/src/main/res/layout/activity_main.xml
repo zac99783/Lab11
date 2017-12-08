@@ -24,9 +24,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:id="@+id/editname"
-            android:ems="10"/>
+            android:ems="10">
+         </EditText>
     </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

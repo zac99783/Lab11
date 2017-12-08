@@ -24,10 +24,11 @@ public class MyDBHelper extends SQLiteOpenHelper{
     public  void onCreate(SQLiteDatabase db){
 
         db.execSQL("CREATE TABLE myTable(_id integer primary key autoincrement," +
-        "title text no null," +
-        "price real no null");
+        "title text no null ," +
+        "price real no null )");
     }
 
+    @Override
     public  void onUpgrade(SQLiteDatabase db,int oldVersion , int newVersion){
 
         db.execSQL("DROP TABLE IF  EXISTS  myTable" );

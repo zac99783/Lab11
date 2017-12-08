@@ -69,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void newBook(){
 
-        if (editname.getText().toString().equals(" ")
-            || editprice.getText().toString().equals(" "))
+        if (editname.getText().toString().equals("")
+            || editprice.getText().toString().equals(""))
                 Toast.makeText(this,"輸入資料不完全",Toast.LENGTH_SHORT).show();
         else {
             double price = Double.parseDouble(editprice.getText().toString());
@@ -83,15 +83,15 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this ,"新增書名:" + editname.getText().toString()
             + "價格:" + price , Toast.LENGTH_SHORT).show();
 
-            editname.setText(" ");
-            editprice.setText(" ");
+            editname.setText("");
+            editprice.setText("");
         }
     }
 
     public  void renewBook(){
 
-        if (editname.getText().toString().equals(" ")
-                || editprice.getText().toString().equals(" "))
+        if (editname.getText().toString().equals("")
+                || editprice.getText().toString().equals(""))
             Toast.makeText(this,"沒有輸入更新值",Toast.LENGTH_SHORT).show();
 
         else {
@@ -103,15 +103,15 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(this ,"成功", Toast.LENGTH_SHORT).show();
 
-            editname.setText(" ");
-            editprice.setText(" ");
+            editname.setText("");
+            editprice.setText("");
         }
 
     }
 
     public  void deleteBook(){
 
-        if (editname.getText().toString().equals(" "))
+        if (editname.getText().toString().equals(""))
             Toast.makeText(this,"請輸入要刪除之值",Toast.LENGTH_SHORT).show();
 
         else {
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
         String[] colum ={"title" , "price"};
 
         Cursor c;
-        if(editname.getText().toString().equals(" "))
+        if(editname.getText().toString().equals(""))
             c = dbrw.query("myTable",colum,null,null,null,null,null);
         else {
             c = dbrw.query("mytable", colum, "title=" + "'" +
